@@ -16,6 +16,10 @@ client.on("ready", async () => {
   console.info(`Daily greeting posted! Post time: ${Date()}`);
 });
 
+client.on('logout', () =>
+  console.log(`Client disconnected at ${new Date().toISOString()}`)
+);
+
 async function pinger() {
   client.channels
     .get("01H10DJPQ01GMQ7N86J2JBTDW7")
