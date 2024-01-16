@@ -1,0 +1,18 @@
+{
+  "name": "misaka-revolt",
+  "version": "1.0.0",
+  "description": "Simple API bot for Revoyo",
+  "main": "index.js",
+  "scripts": {
+    "test": "hello world"
+  },
+  "keywords": [
+    "revolt"
+  ],
+  "author": "Michael George Sickels",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "revolt.js": "^7.0.0-beta.9"
+  }
+}
