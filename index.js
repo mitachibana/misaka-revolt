@@ -10,22 +10,29 @@ const message = new Message();
 
 client.on("ready", async () => {
   console.info(`Logged in as ${client.user.username}! Current time: ${Date()}`);
-  client.channels
-    .get("01HM6DKFX0W1D1MYR06RD1D69A")
-    .sendMessage(`${await daily()}`);
-  console.info(`Daily greeting posted! Post time: ${Date()}`);
 });
 
-client.on('logout', () =>
+client.on("logout", () =>
   console.log(`Client disconnected at ${new Date().toISOString()}`)
 );
 
+async function greeting() {
+  var date = new Date();
+  if (date.getHours() === 16 && date.getMinutes() === 20) {
+    client.channels
+      .get("01H7JD5MGA7P9YN1628298T06Z")
+      .sendMessage(`${await daily()}`);
+    console.info(`Daily greeting sent! Post time: ${Date()}`);
+  }
+}
+setInterval(greeting, 60000);
+
 async function pinger() {
   client.channels
-    .get("01H10DJPQ01GMQ7N86J2JBTDW7")
+    .get("01H7JD5MGA7P9YN1628298T06Z")
     .sendMessage(`${await quote()}`);
   console.info(`Ping sent! Post time: ${Date()}`);
 }
-setInterval(pinger, 600000);
+setInterval(pinger, 60000);
 
 client.loginBot(token);
