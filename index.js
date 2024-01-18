@@ -33,6 +33,6 @@ async function pinger() {
     .sendMessage(`${await quote()}`);
   console.info(`Ping sent! Post time: ${Date()}`);
 }
-setInterval(pinger, 60000);
+setInterval(pinger, 600000);
 
 client.loginBot(token);
