@@ -15,14 +15,14 @@ async function daily() {
   return `
   :01H12ZH32NFRESS95RA5NRCG0N: ***GOOD DAY ReVoYo!*** :01H12ZH32NFRESS95RA5NRCG0N:
     ${data.astronomy?.queryresult?.pods?.[1]?.subpods?.[0]?.plaintext}
-    ${data.astronomy?.queryresult?.pods?.[3]?.subpods?.[1]?.plaintext} | ${astronomy?.queryresult?.pods?.[3]?.subpods?.[0]?.plaintext}
+    ${data.astronomy?.queryresult?.pods?.[3]?.subpods?.[1]?.plaintext} | ${data.astronomy?.queryresult?.pods?.[3]?.subpods?.[0]?.plaintext}
     ${data.astronomy?.queryresult?.pods?.[7]?.subpods?.[0]?.plaintext}
 
     :01HM7RWMYHXZYVG6NKQCBVDYYK: **Banners**
     Current Genshin Banner: Ends on ${data.gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${data.gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
 
-    Current HSR Banner: Ends on ${dara.hBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
+    Current HSR Banner: Ends on ${data.hBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${data.hBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
 
     :01HM7S2WR7G8W1N4QP0RR9K2JC: **Exchange Rates**
