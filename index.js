@@ -18,7 +18,7 @@ client.on("logout", () =>
 
 async function greeting() {
   var date = new Date();
-  if (date.getHours() === 16 && date.getMinutes() === 20) {
+  if (date.getHours() === 21 && date.getMinutes() === 00) { //Time in GMT! (2100GMT/0600JST)
     client.channels
       .get("01H7JD5MGA7P9YN1628298T06Z")
       .sendMessage(`${await daily()}`);
@@ -33,6 +33,6 @@ async function pinger() {
     .sendMessage(`${await quote()}`);
   console.info(`Ping sent! Post time: ${Date()}`);
 }
-setInterval(pinger, 600000);
+setInterval(pinger, 1800000);
 
 client.loginBot(token);
