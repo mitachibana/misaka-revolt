@@ -4,7 +4,7 @@ async function daily() {
   const data = {
     astronomy: (await fetch(`http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=today%20nagano&output=json&ip=138.199.21.39`)).json(),
     gBannerTime: (await fetch(`http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+2+2024&output=json&ip=138.199.21.39`)).json(),
-    hBannerTime: (await fetch(`http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=march+27+2024&output=json&ip=138.199.21.39`)).json(),
+    hBannerTime: (await fetch(`http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+17+2024&output=json&ip=138.199.21.39`)).json(),
     usd: (await fetch(`https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/usd`)).json(),
     cad: (await fetch(`https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/cad`)).json(),
     gbp: (await fetch(`https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/gbp`)).json(),
