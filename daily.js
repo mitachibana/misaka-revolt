@@ -2,16 +2,43 @@ const { tokenWolf, tokenExchange } = require("./config.json");
 
 async function daily() {
   const data = {
-    astronomy: (await fetch(`http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=today%20nagano&output=json&ip=138.199.21.39`)).json(),
-    gBannerTime: (await fetch(`http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+2+2024&output=json&ip=138.199.21.39`)).json(),
-    hBannerTime: (await fetch(`http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+17+2024&output=json&ip=138.199.21.39`)).json(),
-    usd: (await fetch(`https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/usd`)).json(),
-    cad: (await fetch(`https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/cad`)).json(),
-    gbp: (await fetch(`https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/gbp`)).json(),
-    eur: (await fetch(`https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/eur`)).json(),
+    astronomy: (
+      await fetch(
+        `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=today%20nagano&output=json&ip=138.199.21.39`
+      )
+    ).json(),
+    gBannerTime: (
+      await fetch(
+        `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=june+4+2024&output=json&ip=138.199.21.39`
+      )
+    ).json(),
+    hBannerTime: (
+      await fetch(
+        `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=june+18+2024&output=json&ip=138.199.21.39`
+      )
+    ).json(),
     motivation: (await fetch(`https://zenquotes.io/api/random`)).json(),
-    jpword: (await fetch(`https://random-word.ryanrk.com/api/jp/word/random`)).json(),
-  }
+    jpword: (
+      await fetch(`https://random-word.ryanrk.com/api/jp/word/random`)
+    ).json(),
+  };
+  const exchange = await fetch(
+    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/usd`
+  );
+  const usd = await exchange.json();
+  const exchange2 = await fetch(
+    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/cad`
+  );
+  const cad = await exchange2.json();
+  const exchange3 = await fetch(
+    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/gbp`
+  );
+  const gbp = await exchange3.json();
+  const exchange4 = await fetch(
+    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/eur`
+  );
+  const eur = await exchange4.json();
+
   return `
   :01H12ZH32NFRESS95RA5NRCG0N: ***GOOD DAY ReVoYo!*** :01H12ZH32NFRESS95RA5NRCG0N:
     ${data.astronomy?.queryresult?.pods?.[1]?.subpods?.[0]?.plaintext}
@@ -27,10 +54,10 @@ async function daily() {
 
     :01HM7S2WR7G8W1N4QP0RR9K2JC: **Exchange Rates**
     *For those looking to import goods*
-    USD/JPY: ${data.usd.conversion_rates.JPY}
-    CAD/JPY: ${data.cad.conversion_rates.JPY}
-    GBP/JPY: ${data.gbp.conversion_rates.JPY}
-    EUR/JPY: ${data.eur.conversion_rates.JPY}
+    USD/JPY: ${usd.conversion_rates.JPY}
+    CAD/JPY: ${cad.conversion_rates.JPY}
+    GBP/JPY: ${gbp.conversion_rates.JPY}
+    EUR/JPY: ${eur.conversion_rates.JPY}
 
     :01HD3VTA1Y9SYSR1YD5JJWSEBZ: **Moon Phase:**
     ${data.astronomy?.queryresult?.pods?.[6]?.subpods?.[0]?.plaintext}
