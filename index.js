@@ -3,7 +3,6 @@ const path = require("node:path");
 const { Client, Message } = require("revolt.js");
 const { token } = require("./config.json");
 const { daily } = require("./daily");
-const { quote } = require("./quote");
 
 const client = new Client();
 const message = new Message();
@@ -18,7 +17,7 @@ client.on("logout", () =>
 
 async function greeting() {
   var date = new Date();
-  if (date.getHours() === 23 && date.getMinutes() === 00) { //Time in CST/CT! (2300CST/CT/0600JST)
+  if (date.getHours() === 14 && date.getMinutes() === 30) {
     client.channels
       .get("01H7JD5MGA7P9YN1628298T06Z")
       .sendMessage(`${await daily()}`);
