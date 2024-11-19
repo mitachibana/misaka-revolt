@@ -6,11 +6,11 @@ async function daily() {
   );
   const astronomy = await wolfData.json();
   const wolfTime1 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=november+19+2024&output=json&ip=138.199.21.39`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=december+10+2024&output=json&ip=138.199.21.39`
   );
   const gBannerTime = await wolfTime1.json();
   const wolfTime2 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=november+13+2024&output=json&ip=138.199.21.39`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=december+03+2024&output=json&ip=138.199.21.39`
   );
   const hBannerTime = await wolfTime2.json();
   const exchange = await fetch(
