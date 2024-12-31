@@ -1,10 +1,4 @@
-
-
-
 const { tokenWolf, tokenExchange } = require("./config.json");
-
-
-
 
 async function daily() {
   const wolfData = await fetch(
@@ -12,7 +6,7 @@ async function daily() {
   );
   const astronomy = await wolfData.json();
   const wolfTime1 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=january+21+2025&output=json&ip=138.199.21.39`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=january+21+2024&output=json&ip=138.199.21.39`
   );
   const gBannerTime = await wolfTime1.json();
   const wolfTime2 = await fetch(
@@ -45,21 +39,12 @@ async function daily() {
     ${astronomy?.queryresult?.pods?.[3]?.subpods?.[1]?.plaintext} | ${astronomy?.queryresult?.pods?.[3]?.subpods?.[0]?.plaintext}
     ${astronomy?.queryresult?.pods?.[7]?.subpods?.[0]?.plaintext}
 
-
-
-
     :01HM7RWMYHXZYVG6NKQCBVDYYK: **Banners**
     Current Genshin Banner: Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
 
-
-
-
     Current HSR Banner: Ends on ${hBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${hBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
-
-
-
 
     :01HM7S2WR7G8W1N4QP0RR9K2JC: **Exchange Rates**
     *For those looking to import goods*
@@ -68,32 +53,17 @@ async function daily() {
     GBP/JPY: ${gbp.conversion_rates.JPY}
     EUR/JPY: ${eur.conversion_rates.JPY}
 
-
-
-
     :01HD3VTA1Y9SYSR1YD5JJWSEBZ: **Moon Phase:**
     ${astronomy?.queryresult?.pods?.[6]?.subpods?.[0]?.plaintext}
-
-
-
 
     **Quote of the Day:**
     *${motivation?.[0]?.q} 
     -${motivation?.[0]?.a}*
 
-
-
-
     **Japanese Word of the Day:**
     ${jpword?.[0]}
-
-
-
 
     *Pinging <@01H0M62PT3AXCQY4V0CAP08CDC> to notify of function execution, Misaka explains with increasing irritation.*
     `;
 }
 module.exports.daily = daily;
-
-
-
