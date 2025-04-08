@@ -14,7 +14,7 @@ async function daily() {
   );
   const hBannerTime = await wolfTime2.json();
   const wolfTime3 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+30+2025&output=json&ip=138.199.21.39`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+22+2025&output=json&ip=138.199.21.39`
   );
   const zBannerTime = await wolfTime3.json();
   const exchange = await fetch(
@@ -42,36 +42,36 @@ async function daily() {
     ${astronomy?.queryresult?.pods?.[1]?.subpods?.[0]?.plaintext}
     ${astronomy?.queryresult?.pods?.[3]?.subpods?.[1]?.plaintext} | ${astronomy?.queryresult?.pods?.[3]?.subpods?.[0]?.plaintext}
     ${astronomy?.queryresult?.pods?.[7]?.subpods?.[0]?.plaintext}
-
-    **Banners**
-    Genshin Banner | 5.5 Phase 1: Varesa DEBUT, Xianyun
+    
+    :salt: **Banners**
+    ***Genshin Banner | 5.5 Phase 1: Varesa DEBUT, Xianyun***
     Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
-
-    HSR Banner | 3.2 Phase 1: Castorice DEBUT, Fugue, Jiaoqiu, Acheron
+    
+    ***HSR Banner | 3.2 Phase 1: Castorice DEBUT, Fugue, Jiaoqiu, Acheron***
     Ends on ${hBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${hBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
-
-    ZZZ Banner: | 1.6 Phase 2: Trigger DEBUT, Zhu Yuan
+    
+    ***ZZZ Banner: | 1.6 Phase 2: Trigger DEBUT, Zhu Yuan***
     Ends on ${zBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${zBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
-
-    **Exchange Rates**
+    
+    :01HM7S2WR7G8W1N4QP0RR9K2JC: **Exchange Rates**
     USD/JPY: ${usd.conversion_rates.JPY}
     CAD/JPY: ${cad.conversion_rates.JPY}
     GBP/JPY: ${gbp.conversion_rates.JPY}
     EUR/JPY: ${eur.conversion_rates.JPY}
-
-    **Moon Phase:**
+    
+    :crescent_moon: **Moon Phase:**
     ${astronomy?.queryresult?.pods?.[6]?.subpods?.[0]?.plaintext}
-
+    
     **Quote of the Day:**
     *${motivation?.[0]?.q} 
     -${motivation?.[0]?.a}*
-
+    
     **Japanese Word of the Day:**
     ${jpword?.[0]}
-
+    
     *Pinging <@01H0M62PT3AXCQY4V0CAP08CDC> to notify of function execution, Misaka explains with increasing irritation.*
     `;
 }
