@@ -13,12 +13,12 @@ async function daily() {
     `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+30+2025&output=json&ip=138.199.21.39`
   );
   const hBannerTime = await wolfTime2.json();
-  const exchange = await fetch(
-    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/usd`
+  const wolfTime3 = await fetch(
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+30+2025&output=json&ip=138.199.21.39`
   );
   const zBannerTime = await wolfTime3.json();
-  const wolfTime3 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+22+2025&output=json&ip=138.199.21.39`
+  const exchange = await fetch(
+    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/usd`
   );
   const usd = await exchange.json();
   const exchange2 = await fetch(
