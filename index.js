@@ -3,6 +3,7 @@ const path = require("node:path");
 const { Client, Message } = require("revolt.js");
 const { token } = require("./config.json");
 const { daily } = require("./daily");
+const { miyabi } = require("./miyabi");
 // const { quote } = require("./quote");
 
 const client = new Client();
@@ -26,6 +27,17 @@ async function greeting() {
   }
 }
 setInterval(greeting, 60000);
+
+async function adoration() {
+  var date = new Date();
+  if (date.getHours() === 20 && date.getMinutes() === 26) {
+    client.channels
+      .get("01JS49HEFNJ0NQQVMCEEG6V1DW")
+      .sendMessage(`${await miyabi()}`);
+    console.info(`Daily greeting sent! Post time: ${Date()}`);
+  }
+}
+setInterval(adoration, 60000);
 
 /*async function pinger() {
   client.channels
