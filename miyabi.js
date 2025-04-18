@@ -1,6 +1,6 @@
 const { tokenWolf, tokenExchange } = require("./config.json");
 
-async function daily() {
+async function miyabi() {
   const wolfData = await fetch(
     `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=today%20nagano&output=json&ip=138.199.21.39`
   );
