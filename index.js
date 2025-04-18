@@ -19,9 +19,9 @@ client.on("logout", () =>
 
 async function greeting() {
   var date = new Date();
-  if (date.getHours() === 23 && date.getMinutes() === 59) {
+  if (date.getHours() === 13 && date.getMinutes() === 47) {
     client.channels
-      .get("01HM6DKFX0W1D1MYR06RD1D69A")
+      .get("01JS49HEFNJ0NQQVMCEEG6V1DW")
       .sendMessage(`${await daily()}`);
     console.info(`Daily greeting sent! Post time: ${Date()}`);
   }
@@ -31,7 +31,9 @@ setInterval(greeting, 60000);
 async function adoration() {
   var date = new Date();
   if (date.getHours() === 13 && date.getMinutes() === 43) {
-    client.channels.get("01JS49HEFNJ0NQQVMCEEG6V1DW").sendMessage(`${await miyabi()}`);
+    client.channels
+      .get("01JS49HEFNJ0NQQVMCEEG6V1DW")
+      .sendMessage(`${await miyabi()}`);
     console.info(`Daily greeting sent! Post time: ${Date()}`);
   }
 }
