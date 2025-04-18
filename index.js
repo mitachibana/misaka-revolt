@@ -30,10 +30,8 @@ setInterval(greeting, 60000);
 
 async function adoration() {
   var date = new Date();
-  if (date.getHours() === 13 && date.getMinutes() === 41) {
-    client.channels
-      .get("01JS49HEFNJ0NQQVMCEEG6V1DW")
-      .sendMessage(`${await miyabi()}`);
+  if (date.getHours() === 13 && date.getMinutes() === 43) {
+    client.channels.get("01JS49HEFNJ0NQQVMCEEG6V1DW").sendMessage(`${await miyabi()}`);
     console.info(`Daily greeting sent! Post time: ${Date()}`);
   }
 }
