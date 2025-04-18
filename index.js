@@ -30,7 +30,7 @@ setInterval(greeting, 60000);
 
 async function adoration() {
   var date = new Date();
-  if (date.getHours() === 14 && date.getMinutes() === 20) {
+  if (date.getHours() === 14 && date.getMinutes() === 24) {
     client.channels
       .get("01JS49HEFNJ0NQQVMCEEG6V1DW")
       .sendMessage(`${await miyabi()}`);
