@@ -11,8 +11,8 @@ async function miyabi() {
   const hoshimi2 = await wolfData2.json();
   return `
   ## Daily Miyabi Adoration Update
-  > > **Time since last banner (21 January 2025):** ${hoshimi?.queryresult?.pods?.[3]?.subpods?.[2]?.plaintext}
-  > > **Time until ZZZ anniversary (4 July)** ${hoshimi2?.queryresult?.pods?.[3]?.subpods?.[2]?.plaintext} 
+  > **Time Since Last Banner (21 January 2025):** ${hoshimi?.queryresult?.pods?.[3]?.subpods?.[2]?.plaintext}
+  > **Time Until ZZZ 1st Anniversary (4 July 2025):** ${hoshimi2?.queryresult?.pods?.[3]?.subpods?.[2]?.plaintext} 
   
   Please post pictures of Miyabi! 
 
