@@ -1,78 +1,23 @@
 const { tokenWolf, tokenExchange } = require("./config.json");
 
-async function miyabi() {
+async function daily() {
   const wolfData = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=today%20nagano&output=json&ip=138.199.21.39`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=21+january+2025%20nagano&output=json&ip=138.199.21.39`
   );
-  const astronomy = await wolfData.json();
-  const wolfTime1 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=may+6+2025&output=json&ip=138.199.21.39`
+  const hoshimi = await wolfData.json();
+  const wolfData2 = await fetch(
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=4+july+2025%20nagano&output=json&ip=138.199.21.39`
   );
-  const gBannerTime = await wolfTime1.json();
-  const wolfTime2 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+30+2025&output=json&ip=138.199.21.39`
-  );
-  const hBannerTime = await wolfTime2.json();
-  const wolfTime3 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+22+2025&output=json&ip=138.199.21.39`
-  );
-  const zBannerTime = await wolfTime3.json();
-  const exchange = await fetch(
-    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/usd`
-  );
-  const usd = await exchange.json();
-  const exchange2 = await fetch(
-    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/cad`
-  );
-  const cad = await exchange2.json();
-  const exchange3 = await fetch(
-    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/gbp`
-  );
-  const gbp = await exchange3.json();
-  const exchange4 = await fetch(
-    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/eur`
-  );
-  const eur = await exchange4.json();
-  const quote = await fetch("https://zenquotes.io/api/random");
-  const motivation = await quote.json();
-  const word = await fetch("https://random-word.ryanrk.com/api/jp/word/random");
-  const jpword = await word.json();
+  const hoshimi2 = await wolfData2.json();
   return `
-  :01H12ZH32NFRESS95RA5NRCG0N: ***GOOD DAY ReVoYo!*** :01H12ZH32NFRESS95RA5NRCG0N:
-    ${astronomy?.queryresult?.pods?.[1]?.subpods?.[0]?.plaintext}
-    ${astronomy?.queryresult?.pods?.[3]?.subpods?.[1]?.plaintext} | ${astronomy?.queryresult?.pods?.[3]?.subpods?.[0]?.plaintext}
-    ${astronomy?.queryresult?.pods?.[7]?.subpods?.[0]?.plaintext}
-    
-    :salt: **Banners**
-    ***Genshin Banner | 5.5 Phase 2: Xilonen, Venti***
-    Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
-    Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
-    
-    ***HSR Banner | 3.2 Phase 1: Castorice DEBUT, Fugue, Jiaoqiu, Acheron***
-    Ends on ${hBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
-    Time left: ${hBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
-    
-    ***ZZZ Banner | 1.6 Phase 2: Trigger DEBUT, Zhu Yuan***
-    Ends on ${zBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
-    Time left: ${zBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
-    
-    :01HM7S2WR7G8W1N4QP0RR9K2JC: **Exchange Rates**
-    USD/JPY: ${usd.conversion_rates.JPY}
-    CAD/JPY: ${cad.conversion_rates.JPY}
-    GBP/JPY: ${gbp.conversion_rates.JPY}
-    EUR/JPY: ${eur.conversion_rates.JPY}
-    
-    :crescent_moon: **Moon Phase:**
-    ${astronomy?.queryresult?.pods?.[6]?.subpods?.[0]?.plaintext}
-    
-    **Quote of the Day:**
-    *${motivation?.[0]?.q} 
-    -${motivation?.[0]?.a}*
-    
-    **Japanese Word of the Day:**
-    ${jpword?.[0]}
-    
-    *Pinging <@01H0M62PT3AXCQY4V0CAP08CDC> to notify of function execution, Misaka explains with increasing irritation.*
+  ***Daily Miyabi Adoration Update***
+    Time since last banner (21 January 2025): ${hoshimi?.queryresult?.pods?.[3]?.subpods?.[2]?.plaintext}
+    Time until ZZZ anniversary (4 July): ${hoshimi2?.queryresult?.pods?.[3]?.subpods?.[2]?.plaintext}
+    Please post pictures of Miyabi! 
+    ***Remember***
+    Your post must contain only the source and picture. No messages and no NSFW! Reactions OK!
+
+    *Pinging <@01H0M62PT3AXCQY4V0CAP08CDC> to remind the monke he must post a picture, Misaka explains with futility.*
     `;
 }
 module.exports.miyabi = miyabi;
