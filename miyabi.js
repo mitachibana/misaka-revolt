@@ -18,7 +18,7 @@ async function miyabi() {
 
   ***Your post must contain only the source and picture. No messages and no NSFW! Reactions OK!***
 
-    *Pinging <@01H0M62PT3AXCQY4V0CAP08CDC> to remind the monke he must post a picture, Misaka explains with futility.*
+    Pinging <@01H0M62PT3AXCQY4V0CAP08CDC> to remind the monke he must post a picture, Misaka explains with futility.
     `;
 }
 module.exports.miyabi = miyabi;
