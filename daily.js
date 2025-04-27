@@ -44,7 +44,7 @@ async function daily() {
     ${astronomy?.queryresult?.pods?.[7]?.subpods?.[0]?.plaintext}
     
     :salt: **Banners**
-    ***Genshin Banner | 5.5 Phase 22: Xilonen, Venti***
+    ***Genshin Banner | 5.5 Phase 22: Xilonen, Venti, Beidou, Yanfei, Faruzan***
     Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
@@ -52,7 +52,7 @@ async function daily() {
     Ends on ${hBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${hBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
-    ***ZZZ Banner | 1.7 Phase 1: Vivian DEBUT, Jane***
+    ***ZZZ Banner | 1.7 Phase 1: Vivian DEBUT, Jane, Seth, Piper***
     Ends on ${zBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${zBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
