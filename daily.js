@@ -44,15 +44,15 @@ async function daily() {
     ${astronomy?.queryresult?.pods?.[7]?.subpods?.[0]?.plaintext}
     
     :salt: **Banners**
-    ***Genshin Banner | 5.5 Phase 2: Xilonen, Venti***
+    ***Genshin Banner | 5.5 Phase 22: Xilonen, Venti***
     Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
-    ***HSR Banner | 3.2 Phase 1: Castorice, Fugue, Jiaoqiu, Acheron***
+    ***HSR Banner | 3.2 Phase 1: Castorice DEBUT, Fugue, Jiaoqiu, Acheron***
     Ends on ${hBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${hBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
-    ***ZZZ Banner | 1.7 Phase 1: Vivian, Jane***
+    ***ZZZ Banner | 1.7 Phase 1: Vivian DEBUT, Jane***
     Ends on ${zBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${zBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
