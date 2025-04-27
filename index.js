@@ -19,7 +19,7 @@ client.on("logout", () =>
 
 async function greeting() {
   var date = new Date();
-  if (date.getHours() === 17 && date.getMinutes() === 26) {
+  if (date.getHours() === 23 && date.getMinutes() === 59) {
     client.channels
       .get("01HM6DKFX0W1D1MYR06RD1D69A")
       .sendMessage(`${await daily()}`);
@@ -30,7 +30,7 @@ setInterval(greeting, 60000);
 
 async function adoration() {
   var date = new Date();
-  if (date.getHours() === 23 && date.getMinutes() === 50) {
+  if (date.getHours() === 23 && date.getMinutes() === 57) {
     client.channels
       .get("01JS1X346XDV8JRC8FVA8DPGQS")
       .sendMessage(`${await miyabi()}`);
