@@ -10,7 +10,7 @@ async function daily() {
   );
   const gBannerTime = await wolfTime1.json();
   const wolfTime2 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+31+2025&output=json&ip=138.199.21.39`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+29+2025&output=json&ip=138.199.21.39`
   );
   const hBannerTime = await wolfTime2.json();
   const wolfTime3 = await fetch(
