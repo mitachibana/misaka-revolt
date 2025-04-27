@@ -10,11 +10,11 @@ async function daily() {
   );
   const gBannerTime = await wolfTime1.json();
   const wolfTime2 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+29+2025&output=json`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+30+2025&output=json`
   );
   const hBannerTime = await wolfTime2.json();
   const wolfTime3 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=may+13+2025&output=json`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=may+14+2025&output=json`
   );
   const zBannerTime = await wolfTime3.json();
   const exchange = await fetch(
