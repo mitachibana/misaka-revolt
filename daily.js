@@ -48,11 +48,11 @@ async function daily() {
     Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
-    ***HSR Banner | 3.2 Phase 1: Castorice DEBUT, Fugue, Jiaoqiu, Acheron***
+    ***HSR Banner | 3.2 Phase 1: Castorice, Fugue, Jiaoqiu, Acheron***
     Ends on ${hBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${hBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
-    ***ZZZ Banner | 1.7 Phase 1: Vivian DEBUT, Jane***
+    ***ZZZ Banner | 1.7 Phase 1: Vivian, Jane***
     Ends on ${zBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${zBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
