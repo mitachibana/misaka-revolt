@@ -6,7 +6,7 @@ async function daily() {
   );
   const astronomy = await wolfData.json();
   const wolfTime1 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=may+6+2025&output=json&ip=138.199.21.39`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+15+2025&output=json&ip=138.199.21.39`
   );
   const gBannerTime = await wolfTime1.json();
   const wolfTime2 = await fetch(
@@ -14,9 +14,25 @@ async function daily() {
   );
   const hBannerTime = await wolfTime2.json();
   const wolfTime3 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=may+14+2025&output=json&ip=138.199.21.39`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=april+22+2025&output=json&ip=138.199.21.39`
   );
   const zBannerTime = await wolfTime3.json();
+  const exchange = await fetch(
+    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/usd`
+  );
+  const usd = await exchange.json();
+  const exchange2 = await fetch(
+    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/cad`
+  );
+  const cad = await exchange2.json();
+  const exchange3 = await fetch(
+    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/gbp`
+  );
+  const gbp = await exchange3.json();
+  const exchange4 = await fetch(
+    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/eur`
+  );
+  const eur = await exchange4.json();
   const quote = await fetch("https://zenquotes.io/api/random");
   const motivation = await quote.json();
   const word = await fetch("https://random-word.ryanrk.com/api/jp/word/random");
@@ -28,7 +44,7 @@ async function daily() {
     ${astronomy?.queryresult?.pods?.[7]?.subpods?.[0]?.plaintext}
     
     :salt: **Banners**
-    ***Genshin Banner | 5.5 Phase 2: Xilonen, Venti***
+    ***Genshin Banner | 5.5 Phase 1: Varesa DEBUT, Xianyun***
     Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
@@ -36,9 +52,15 @@ async function daily() {
     Ends on ${hBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${hBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
-    ***ZZZ Banner | 1.7 Phase 1: Vivian DEBUT, Jane, Piper, Seth***
+    ***ZZZ Banner | 1.6 Phase 2: Trigger DEBUT, Zhu Yuan***
     Ends on ${zBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${zBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
+    
+    :01HM7S2WR7G8W1N4QP0RR9K2JC: **Exchange Rates**
+    USD/JPY: ${usd.conversion_rates.JPY}
+    CAD/JPY: ${cad.conversion_rates.JPY}
+    GBP/JPY: ${gbp.conversion_rates.JPY}
+    EUR/JPY: ${eur.conversion_rates.JPY}
     
     :crescent_moon: **Moon Phase:**
     ${astronomy?.queryresult?.pods?.[6]?.subpods?.[0]?.plaintext}
