@@ -17,22 +17,6 @@ async function daily() {
     `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=may+14+2025&output=json&ip=138.199.21.39`
   );
   const zBannerTime = await wolfTime3.json();
-  const exchange = await fetch(
-    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/usd`
-  );
-  const usd = await exchange.json();
-  const exchange2 = await fetch(
-    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/cad`
-  );
-  const cad = await exchange2.json();
-  const exchange3 = await fetch(
-    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/gbp`
-  );
-  const gbp = await exchange3.json();
-  const exchange4 = await fetch(
-    `https://v6.exchangerate-api.com/v6/${tokenExchange}/latest/eur`
-  );
-  const eur = await exchange4.json();
   const quote = await fetch("https://zenquotes.io/api/random");
   const motivation = await quote.json();
   const word = await fetch("https://random-word.ryanrk.com/api/jp/word/random");
@@ -55,12 +39,6 @@ async function daily() {
     ***ZZZ Banner | 1.7 Phase 1: Vivian DEBUT, Jane, Piper, Seth***
     Ends on ${zBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${zBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
-    
-    :01HM7S2WR7G8W1N4QP0RR9K2JC: **Exchange Rates**
-    USD/JPY: ${usd.conversion_rates.JPY}
-    CAD/JPY: ${cad.conversion_rates.JPY}
-    GBP/JPY: ${gbp.conversion_rates.JPY}
-    EUR/JPY: ${eur.conversion_rates.JPY}
     
     :crescent_moon: **Moon Phase:**
     ${astronomy?.queryresult?.pods?.[6]?.subpods?.[0]?.plaintext}
