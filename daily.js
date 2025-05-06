@@ -6,7 +6,7 @@ async function daily() {
   );
   const astronomy = await wolfData.json();
   const wolfTime1 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=may+6+2025&output=json`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=may+27+2025&output=json`
   );
   const gBannerTime = await wolfTime1.json();
   const wolfTime2 = await fetch(
@@ -44,7 +44,7 @@ async function daily() {
     ${astronomy?.queryresult?.pods?.[7]?.subpods?.[0]?.plaintext}
     
     :salt: **Banners**
-    ***Genshin Banner | 5.5 Phase 2: Xilonen, Venti, Beidou, Yanfei, Faruzan***
+    ***Genshin Banner | 5.5 Phase 2: Escoffier DEBUT, Navia, Layla, Ororon, Ifa***
     Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
