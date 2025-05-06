@@ -44,7 +44,7 @@ async function daily() {
     ${astronomy?.queryresult?.pods?.[7]?.subpods?.[0]?.plaintext}
     
     :salt: **Banners**
-    ***Genshin Banner | 5.5 Phase 2: Escoffier DEBUT, Navia, Layla, Ororon, Ifa***
+    ***Genshin Banner | 5.6 Phase 1: Escoffier DEBUT, Navia, Layla, Ororon, Ifa***
     Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
