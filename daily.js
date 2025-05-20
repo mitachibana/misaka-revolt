@@ -2,7 +2,7 @@ const { tokenWolf, tokenExchange } = require("./config.json");
 
 async function daily() {
   const wolfData = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=today%20nagano&output=json&ip=138.199.21.39`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=today%20nagano&output=json`
   );
   const astronomy = await wolfData.json();
   const wolfTime1 = await fetch(
@@ -39,10 +39,7 @@ async function daily() {
   const jpword = await word.json();
   return `
   :01H12ZH32NFRESS95RA5NRCG0N: ***GOOD DAY ReVoYo!*** :01H12ZH32NFRESS95RA5NRCG0N:
-    ${astronomy?.queryresult?.pods?.[1]?.subpods?.[0]?.plaintext}
-    ${astronomy?.queryresult?.pods?.[3]?.subpods?.[1]?.plaintext} | ${astronomy?.queryresult?.pods?.[3]?.subpods?.[0]?.plaintext}
-    ${astronomy?.queryresult?.pods?.[7]?.subpods?.[0]?.plaintext}
-    
+
     :salt: **Banners**
     ***Genshin Banner | 5.6 Phase 1: Escoffier DEBUT, Navia, Layla, Ororon, Ifa***
     Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
