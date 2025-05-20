@@ -10,7 +10,7 @@ async function daily() {
   );
   const gBannerTime = await wolfTime1.json();
   const wolfTime2 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=may+20+2025&output=json`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=june+11+2025&output=json`
   );
   const hBannerTime = await wolfTime2.json();
   const wolfTime3 = await fetch(
@@ -48,7 +48,7 @@ async function daily() {
     Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
-    ***HSR Banner | 3.2 Phase 1: Anaxa DEBUT, Dr. Ratio, Dan Heng, Serval, Moze***
+    ***HSR Banner | 3.3 Phase 1: Hyacine DEBUT, The Herta, Misha, Serval, Natasha***
     Ends on ${hBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${hBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
