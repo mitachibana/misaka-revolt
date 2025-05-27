@@ -1,12 +1,8 @@
 const { tokenWolf, tokenExchange } = require("./config.json");
 
 async function daily() {
-  const wolfData = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=today%20nagano&output=json`
-  );
-  const astronomy = await wolfData.json();
   const wolfTime1 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=may+27+2025&output=json`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=june+17+2025&output=json`
   );
   const gBannerTime = await wolfTime1.json();
   const wolfTime2 = await fetch(
@@ -41,7 +37,7 @@ async function daily() {
   :01H12ZH32NFRESS95RA5NRCG0N: ***GOOD DAY ReVoYo!*** :01H12ZH32NFRESS95RA5NRCG0N:
 
     :salt: **Banners**
-    ***Genshin Banner | 5.6 Phase 1: Escoffier DEBUT, Navia, Layla, Ororon, Ifa***
+    ***Genshin Banner | 5.6 Phase 2: Kinich, Raiden, Thoma, Sara, Lynette***
     Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
@@ -58,9 +54,6 @@ async function daily() {
     CAD/JPY: ${cad.conversion_rates.JPY}
     GBP/JPY: ${gbp.conversion_rates.JPY}
     EUR/JPY: ${eur.conversion_rates.JPY}
-    
-    :crescent_moon: **Moon Phase:**
-    ${astronomy?.queryresult?.pods?.[6]?.subpods?.[0]?.plaintext}
     
     **Quote of the Day:**
     *${motivation?.[0]?.q} 
