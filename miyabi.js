@@ -6,7 +6,7 @@ async function miyabi() {
   );
   const hoshimi = await wolfData.json();
   const wolfData2 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=4+july+2025%20nagano&output=json&ip=138.199.21.39`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=16+july+2025%20nagano&output=json&ip=138.199.21.39`
   );
   const hoshimi2 = await wolfData2.json();
   return `
