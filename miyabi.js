@@ -2,11 +2,11 @@ const { tokenWolf, tokenExchange } = require("./config.json");
 
 async function miyabi() {
   const wolfData = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=21+january+2025%20nagano&output=json&ip=138.199.21.39`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=january+21+2025%20nagano&output=json&ip=138.199.21.39`
   );
   const hoshimi = await wolfData.json();
   const wolfData2 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=16+july+2025%20nagano&output=json&ip=138.199.21.39`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=july+16+2025%20nagano&output=json&ip=138.199.21.39`
   );
   const hoshimi2 = await wolfData2.json();
   return `
