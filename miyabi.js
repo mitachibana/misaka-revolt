@@ -12,9 +12,8 @@ async function miyabi() {
   return `
   ## Daily Miyabi Adoration Update
   > **Time Since Last Banner (21 January 2025):** ${hoshimi?.queryresult?.pods?.[3]?.subpods?.[2]?.plaintext}
-  > **Time Until ZZZ 1st Anniversary (4 July 2025):** ${hoshimi2?.queryresult?.pods?.[3]?.subpods?.[2]?.plaintext} 
   
-  Please post pictures of Miyabi! 
+  THE HOSHIMI MIYABI RERUN IS HERE AT LAST! MAY ALL MIYABI WANTERS BE MIYABI HAVERS. PRAISE BE!
 
   ***Your post must contain only the source and picture. No messages and no NSFW! Reactions OK!***
 
