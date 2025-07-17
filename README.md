@@ -1,6 +1,6 @@
-18 April 2025 Update:
+17 July 2025 Update:
 
-Added an automated post to count days since the 25 January 2025 ZZZ Hoshimi Miyabi banner and also days until the ZZZ anniversary (4 July 2025). If you clone, you will need to update the wolframalpha api call to fetch info on the date of the most recent Miyabi banner. Otherwise make changes as specified for the daily function below.
+Miyabi rerun has finally arrived. miyabi.js now posts a message counting days left for the current rerun. Make changes as specified for the daily function below.
 
 Basic api fetcher for the ReVoYo server on the platform Revolt.
 1. Sends a daily message at a scheduled time via the daily.js. JavaScript is not good at running functions at a specific time, so there is a function that checks the time quite often. Once the set time is hit, the daily.js function will execute.
