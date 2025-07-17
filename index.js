@@ -34,7 +34,7 @@ async function adoration() {
     client.channels
       .get("01JS1X346XDV8JRC8FVA8DPGQS")
       .sendMessage(`${await miyabi()}`);
-    console.info(`Daily greeting sent! Post time: ${Date()}`);
+    console.info(`Daily Miyabi sent! Post time: ${Date()}`);
   }
 }
 setInterval(adoration, 60000);
