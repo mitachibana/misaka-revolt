@@ -7,7 +7,7 @@ async function miyabi() {
   const hoshimi = await wolfData.json();
   return `
   ## Daily Miyabi Adoration Update
-  > **Miyabi Banner End Date (6 August 2025):** ${hoshimi?.queryresult?.pods?.[3]?.subpods?.[2]?.title}
+  > **Miyabi Banner End Date (6 August 2025):** ${hoshimi?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
   
   THE HOSHIMI MIYABI RERUN IS HERE AT LAST! MAY ALL MIYABI WANTERS BE MIYABI HAVERS. PRAISE BE!
 
