@@ -28,6 +28,7 @@ async function greeting() {
 }
 setInterval(greeting, 60000);
 
+/* miyabi.js function turned off. Can be used as a template for a timed post.
 async function adoration() {
   var date = new Date();
   if (date.getHours() === 23 && date.getMinutes() === 56) {
@@ -38,6 +39,7 @@ async function adoration() {
   }
 }
 setInterval(adoration, 60000);
+*/
 
 /*async function pinger() {
   client.channels
