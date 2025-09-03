@@ -28,18 +28,16 @@ async function greeting() {
 }
 setInterval(greeting, 60000);
 
-/* miyabi.js function turned off. Can be used as a template for a timed post.
 async function adoration() {
   var date = new Date();
   if (date.getHours() === 23 && date.getMinutes() === 56) {
     client.channels
-      .get("01JS1X346XDV8JRC8FVA8DPGQS")
+      .get("01K47MW7W4FKDBDAM587A0Q3P3")
       .sendMessage(`${await miyabi()}`);
     console.info(`Daily Miyabi sent! Post time: ${Date()}`);
   }
 }
 setInterval(adoration, 60000);
-*/
 
 /*async function pinger() {
   client.channels
