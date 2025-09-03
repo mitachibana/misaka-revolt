@@ -7,7 +7,7 @@ async function miyabi() {
   const hoshimi = await wolfData.json();
   return `
   ## Daily Alice Wipeouts!
-  > **Last Alice Banner End Date (3 September 2025):** ${hoshimi?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
+  > **Last Alice Banner End Date (3 September 2025):** ${hoshimi?.queryresult?.pods?.[3]?.subpods?.[0]?.plaintext}
   
   Counting the days since Alice's debut and counting down the days until her rerun!
   
