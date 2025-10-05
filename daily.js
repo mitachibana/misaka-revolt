@@ -38,16 +38,16 @@ async function daily() {
 
     :salt: **Banners**
     ***Genshin Banner | 6.0 Luna 1 Phase 2: Flins DEBUT, Yelan, Sucrose, Dori, Aino DEBUT***
-    Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
-    Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
+    Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.img?.title}
+    Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.img?.title}
     
     ***HSR Banner | 3.6 Phase 1: Evernight DEBUT, the Herta, Archer & Saber (COLLAB), Misha, Guinaifen, Xueyi***
-    Ends on ${hBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
-    Time left: ${hBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
+    Ends on ${hBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.img?.title}
+    Time left: ${hBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.img?.title}
     
     ***ZZZ Banner | 2.2 Phase 2: Orphie and Magus DEBUT, Evelyn, Anton, Lucy***
-    Ends on ${zBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
-    Time left: ${zBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
+    Ends on ${zBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.img?.title}
+    Time left: ${zBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.img?.title}
     
     :01HM7S2WR7G8W1N4QP0RR9K2JC: **Exchange Rates**
     USD/JPY: ${usd.conversion_rates.JPY}
@@ -66,6 +66,7 @@ async function daily() {
     `;
 }
 module.exports.daily = daily;
+
 
 
 
