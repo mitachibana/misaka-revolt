@@ -37,7 +37,7 @@ async function daily() {
   :01H12ZH32NFRESS95RA5NRCG0N: ***GOOD DAY ReVoYo!*** :01H12ZH32NFRESS95RA5NRCG0N:
 
     :salt: **Banners**
-    ***Genshin Banner | 6.0 Luna 1: Flins DEBUT, Yelan, Sucrose, Dori, Aino DEBUT***
+    ***Genshin Banner | 6.0 Luna 1 Phase 2: Flins DEBUT, Yelan, Sucrose, Dori, Aino DEBUT***
     Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.plaintext}
     Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.plaintext}
     
@@ -66,6 +66,7 @@ async function daily() {
     `;
 }
 module.exports.daily = daily;
+
 
 
 
