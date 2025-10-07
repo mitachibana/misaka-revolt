@@ -31,8 +31,6 @@ async function daily() {
   const eur = await exchange4.json();
   const quote = await fetch("https://zenquotes.io/api/random");
   const motivation = await quote.json();
-  const word = await fetch("https://random-word.ryanrk.com/api/jp/word/random");
-  const jpword = await word.json();
   return `
   :01H12ZH32NFRESS95RA5NRCG0N: ***GOOD DAY ReVoYo!*** :01H12ZH32NFRESS95RA5NRCG0N:
 
@@ -59,13 +57,11 @@ async function daily() {
     *${motivation?.[0]?.q} 
     -${motivation?.[0]?.a}*
     
-    **Japanese Word of the Day:**
-    ${jpword?.[0]}
-    
     *Pinging <@01H0M62PT3AXCQY4V0CAP08CDC> to notify of function execution, Misaka explains with increasing irritation.*
     `;
 }
 module.exports.daily = daily;
+
 
 
 
