@@ -1,5 +1,5 @@
 const { tokenWolf, tokenExchange } = require("./config.json");
-const { gBannerEnd, gDescription, hBannerEnd, hDescription, zBannerend, zDescription } = require("./config-daily.json");
+const { gBannerEnd, gDescription, hBannerEnd, hDescription, zBannerEnd, zDescription } = require("./config-daily.json");
 
 async function daily() {
   const wolfTime1 = await fetch(
@@ -11,7 +11,7 @@ async function daily() {
   );
   const hBannerTime = await wolfTime2.json();
   const wolfTime3 = await fetch(
-    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=${zBannerend}&output=json`
+    `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=${zBannerEnd}&output=json`
   );
   const zBannerTime = await wolfTime3.json();
   const exchange = await fetch(
@@ -62,6 +62,7 @@ async function daily() {
     `;
 }
 module.exports.daily = daily;
+
 
 
 
