@@ -2,9 +2,9 @@
 *Got sick of directly editing the daily.js function each time the Genshin, HSR, and ZZZ banners changed over. I created the config-daily.json in order to simplify this routine update process. *
 
 Basic api fetcher for the ReVoYo server on the platform Stoat.
--Sends a daily message with Genshin, HSR, and ZZZ banner info at a scheduled time via the daily.js. JavaScript is not good at running functions at a specific time, so there is a function that checks the time quite often. Once the set time is hit, the daily.js function will execute.
+a. Sends a daily message with Genshin, HSR, and ZZZ banner info at a scheduled time via the daily.js. JavaScript is not good at running functions at a specific time, so there is a function that checks the time quite often. Once the set time is hit, the daily.js function will execute.
 
--The bot is also equipped to send a separate timed post to another channel. Set the time in the index.js and set the content and channel in miyabi.js.
+b. The bot is also equipped to send a separate timed post to another channel. Set the time in the index.js and set the content and channel in miyabi.js.
 
 SETUP:
 The index.js handles the login as well as the setInterval of the 2 timed post functions.
