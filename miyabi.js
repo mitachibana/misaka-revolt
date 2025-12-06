@@ -13,17 +13,15 @@ async function miyabi() {
   - suichanwaa#4961
   - Thijnmens#4468
   ### In case of emergency:
-  You can contact us via the Google Form below. All admins get a notification whenever someone submits a response. This is the failsafe in case the Stoat platform becomes unuseable for any reason.
-  (No email addresses or personal information is collected by the form. You may choose enter your username if you wish to be contacted, however)
+  You can contact us via the Google Form below. All admins get a notification whenever someone submits a response. 
   https://forms.gle/i9vNpx4w2yGosfu87
-
-  ## YE SHUNGUANG WORSHIP
-  
+  ### YE SHUNGUANG WORSHIP
   > **Ye Shunguang Debut Banner Start Date (30 December 2025):** ${hoshimi?.queryresult?.pods?.[3]?.subpods?.[0]?.plaintext}
   
   #### Post art and messages about Ye Shunguang in <#01KBSVRTNXJ443RD169WNKV3Y6>! We know you all absolutely adore her, but please remember to follow the rules!
     `;
 }
 module.exports.miyabi = miyabi;
+
 
 
