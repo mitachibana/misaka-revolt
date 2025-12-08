@@ -11,11 +11,11 @@ async function miyabi() {
   - suichanwaa#4961
   - Thijnmens#4468
   **If Stoat is down or you want an anonymous way to contact a mod, use this Google Form. (Please bookmark it in the case of downage!)**
-  https://forms.gle/i9vNpx4w2yGosfu87
+  <https://forms.gle/i9vNpx4w2yGosfu87>
   ----
-  ### YE SHUNGUANG WORSHIP
+  #### YE SHUNGUANG WORSHIP
   > **Ye Shunguang Debut Banner Start Date (30 December 2025):** ${hoshimi?.queryresult?.pods?.[3]?.subpods?.[0]?.plaintext}
-  #### Post art and messages about Ye Shunguang in <#01KBSVRTNXJ443RD169WNKV3Y6>! We know you all absolutely adore her, but please remember to follow the rules!
+  Post art and messages about Ye Shunguang in <#01KBSVRTNXJ443RD169WNKV3Y6>! We know you all absolutely adore her, but please remember to follow the rules!
     `;
 }
 module.exports.miyabi = miyabi;
