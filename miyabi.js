@@ -9,6 +9,7 @@ async function miyabi() {
   We hope everyone is having a good day! Just a reminder that if you need anything, DM or Ping a mod:
   - mitachibana#1667
   - suichanwaa#4961
+  - Luca#9530
   - Thijnmens#4468
   **If Stoat is down or you want an anonymous way to contact a mod, use this Google Form. (Please bookmark it in the case of downage!)**
   <https://forms.gle/i9vNpx4w2yGosfu87>
