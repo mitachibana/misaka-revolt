@@ -1,6 +1,7 @@
-const { tokenWolf, tokenExchange } = require("./config.json");
+import config from "./config.json" with { type: "json" };
+const { tokenWolf, tokenExchange } = config;
 
-async function miyabi() {
+export async function miyabi() {
   const wolfData = await fetch(
     `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=december+30+2025%20nagano&output=json&ip=138.199.21.39`
   );
@@ -16,7 +17,6 @@ async function miyabi() {
   <https://forms.gle/i9vNpx4w2yGosfu87>
   ----`;
 }
-module.exports.miyabi = miyabi;
 
 
 
