@@ -10,7 +10,7 @@
   "keywords": [
     "revolt"
   ],
-  "author": "Michael George Sickels",
+  "author": "Mitachibana",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^14.14.1",
