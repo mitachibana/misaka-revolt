@@ -1,3 +1,5 @@
+import WebSocket from "ws";
+globalThis.WebSocket = WebSocket;
 import fs from "node:fs";
 import path from "node:path";
 import { Client, Message } from "revolt.js";
