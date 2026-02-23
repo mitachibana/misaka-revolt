@@ -1,7 +1,10 @@
-const { tokenWolf, tokenExchange } = require("./config.json");
-const { gBannerEnd, gDescription, hBannerEnd, hDescription, zBannerEnd, zDescription } = require("./config-daily.json");
+import config from "./config.json" with { type: "json" };
+const { tokenWolf, tokenExchange } = config;
 
-async function daily() {
+import configDaily from "./config-daily.json" with { type: "json" };
+const { gBannerEnd, gDescription, hBannerEnd, hDescription, zBannerEnd, zDescription } = configDaily;
+
+export async function daily() {
   const wolfTime1 = await fetch(
     `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=${gBannerEnd}&output=json`
   );
@@ -61,9 +64,6 @@ async function daily() {
     *Pinging <@01H0M62PT3AXCQY4V0CAP08CDC> to notify of function execution, Misaka explains with increasing irritation.*
     `;
 }
-module.exports.daily = daily;
-
-
 
 
 
