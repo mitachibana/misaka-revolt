@@ -1,10 +1,12 @@
-const fs = require("node:fs");
-const path = require("node:path");
-const { Client, Message } = require("revolt.js");
-const { token } = require("./config.json");
-const { channelGreeting, channelAdoration } = require("./config-daily.json");
-const { daily } = require("./daily");
-const { miyabi } = require("./miyabi");
+import fs from "node:fs";
+import path from "node:path";
+import { Client, Message } from "revolt.js";
+import config from "./config.json" with { type: "json" };
+const { token } = config;
+import configDaily from "./config-daily.json" with { type: "json" };
+const { channelGreeting, channelAdoration } = configDaily;
+import { daily } from "./daily.js";
+import { miyabi } from "./miyabi.js";
 
 const client = new Client();
 const message = new Message();
