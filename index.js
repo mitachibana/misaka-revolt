@@ -23,7 +23,7 @@ client.on("logout", () =>
 
 async function greeting() {
   var date = new Date();
-  if (date.getHours() === 22 && date.getMinutes() === 10) {
+  if (date.getHours() === 4 && date.getMinutes() === 0) {
     client.channels
       .get(channelGreeting)
       .sendMessage(`${await daily()}`);
