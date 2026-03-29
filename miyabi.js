@@ -13,6 +13,7 @@ export async function miyabi() {
   - Luca#9530
   - campbellClansman#6180
   - Thijnmens#4468
+  - Devi#1248
   **If Stoat is down or you want an anonymous way to contact a mod, use this Google Form. (Please bookmark it in the case of downage!)**
   <https://forms.gle/i9vNpx4w2yGosfu87>
   ----`;
