@@ -32,6 +32,7 @@ async function greeting() {
 }
 setInterval(greeting, 60000);
 
+/* turned off daily reminder post
 async function adoration() {
   var date = new Date();
   if (date.getHours() === 4 && date.getMinutes() === 5) {
@@ -42,5 +43,6 @@ async function adoration() {
   }
 }
 setInterval(adoration, 60000);
+*/
 
 client.loginBot(token);
