@@ -36,8 +36,6 @@ export async function daily() {
   const quote = await fetch("https://zenquotes.io/api/random");
   const motivation = await quote.json();
   return `
-  :01H12ZH32NFRESS95RA5NRCG0N: GOOD DAY ReVoYo! :01H12ZH32NFRESS95RA5NRCG0N:
-
     Banners
     Genshin Banner | ${gDescription}
     Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.img?.title}
@@ -60,8 +58,6 @@ export async function daily() {
     Quote of the Day:
     ${motivation?.[0]?.q} 
     by ${motivation?.[0]?.a}
-    
-    Pinging <@01H0M62PT3AXCQY4V0CAP08CDC> to notify of function execution, Misaka explains with increasing irritation.
     `;
 }
 
