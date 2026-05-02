@@ -36,28 +36,32 @@ export async function daily() {
   const quote = await fetch("https://zenquotes.io/api/random");
   const motivation = await quote.json();
   return `
-    Banners
-    Genshin Banner | ${gDescription}
+  :01H12ZH32NFRESS95RA5NRCG0N: ***GOOD DAY ReVoYo!*** :01H12ZH32NFRESS95RA5NRCG0N:
+
+    :salt: **Banners**
+    ***Genshin Banner | ${gDescription}***
     Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.img?.title}
     Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.img?.title}
     
-    HSR Banner | ${hDescription}
+    ***HSR Banner | ${hDescription}***
     Ends on ${hBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.img?.title}
     Time left: ${hBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.img?.title}
     
-    ZZZ Banner | ${zDescription}
+    ***ZZZ Banner | ${zDescription}***
     Ends on ${zBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.img?.title}
     Time left: ${zBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.img?.title}
     
-    Exchange Rates
+    :01HM7S2WR7G8W1N4QP0RR9K2JC: **Exchange Rates**
     USD/JPY: ${usd.conversion_rates.JPY}
     CAD/JPY: ${cad.conversion_rates.JPY}
     GBP/JPY: ${gbp.conversion_rates.JPY}
     EUR/JPY: ${eur.conversion_rates.JPY}
     
-    Quote of the Day:
-    ${motivation?.[0]?.q} 
-    by ${motivation?.[0]?.a}
+    **Quote of the Day:**
+    *${motivation?.[0]?.q} 
+    -${motivation?.[0]?.a}*
+    
+    *Pinging <@01H0M62PT3AXCQY4V0CAP08CDC> to notify of function execution, Misaka explains with increasing irritation.*
     `;
 }
 
