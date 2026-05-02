@@ -38,7 +38,7 @@ export async function daily() {
   return `
   :01H12ZH32NFRESS95RA5NRCG0N: GOOD DAY ReVoYo! :01H12ZH32NFRESS95RA5NRCG0N:
 
-    :salt: Banners
+    Banners
     Genshin Banner | ${gDescription}
     Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.img?.title}
     Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.img?.title}
@@ -51,7 +51,7 @@ export async function daily() {
     Ends on ${zBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.img?.title}
     Time left: ${zBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.img?.title}
     
-    :01HM7S2WR7G8W1N4QP0RR9K2JC: Exchange Rates
+    Exchange Rates
     USD/JPY: ${usd.conversion_rates.JPY}
     CAD/JPY: ${cad.conversion_rates.JPY}
     GBP/JPY: ${gbp.conversion_rates.JPY}
@@ -59,7 +59,7 @@ export async function daily() {
     
     Quote of the Day:
     ${motivation?.[0]?.q} 
-    -${motivation?.[0]?.a}
+    by ${motivation?.[0]?.a}
     
     Pinging <@01H0M62PT3AXCQY4V0CAP08CDC> to notify of function execution, Misaka explains with increasing irritation.
     `;
