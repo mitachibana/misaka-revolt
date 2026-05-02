@@ -1,3 +1,9 @@
+import config from "./config.json" with { type: "json" };
+const { tokenWolf, tokenExchange } = config;
+
+import configDaily from "./config-daily.json" with { type: "json" };
+const { gBannerEnd, gDescription, hBannerEnd, hDescription, zBannerEnd, zDescription } = configDaily;
+
 export async function daily() {
   const wolfTime1 = await fetch(
     `http://api.wolframalpha.com/v2/query?appid=${tokenWolf}&input=${gBannerEnd}&output=json`
@@ -29,8 +35,8 @@ export async function daily() {
   const eur = await exchange4.json();
   const quote = await fetch("https://zenquotes.io/api/random");
   const motivation = await quote.json();
-  
-  return `:01H12ZH32NFRESS95RA5NRCG0N: ***GOOD DAY ReVoYo!*** :01H12ZH32NFRESS95RA5NRCG0N:
+  return `
+  :01H12ZH32NFRESS95RA5NRCG0N: ***GOOD DAY ReVoYo!*** :01H12ZH32NFRESS95RA5NRCG0N:
 
 :salt: **Banners**
 ***Genshin Banner | ${gDescription}***
@@ -55,5 +61,13 @@ EUR/JPY: ${eur.conversion_rates.JPY}
 *${motivation?.[0]?.q} 
 -${motivation?.[0]?.a}*
 
-*Pinging <@01H0M62PT3AXCQY4V0CAP08CDC> to notify of function execution, Misaka explains with increasing irritation.*`;
+*Pinging <@01H0M62PT3AXCQY4V0CAP08CDC> to notify of function execution, Misaka explains with increasing irritation.*
+    `;
 }
+
+
+
+
+
+
+
