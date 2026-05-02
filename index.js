@@ -26,7 +26,7 @@ async function greeting() {
   if (date.getHours() === 16 && date.getMinutes() === 6) {
     client.channels
       .get(channelGreeting)
-      .sendMessage.toString(`${await daily()}`);
+      .sendMessage(`${await daily()}`);
     console.info(`Daily greeting sent! Post time: ${Date()}`);
   }
 }
