@@ -36,9 +36,9 @@ export async function daily() {
   const quote = await fetch("https://zenquotes.io/api/random");
   const motivation = await quote.json();
   return `
-  :01H12ZH32NFRESS95RA5NRCG0N: ***GOOD DAY ReVoYo!*** :01H12ZH32NFRESS95RA5NRCG0N:
+#### :01H12ZH32NFRESS95RA5NRCG0N: GOOD DAY ReVoYo! :01H12ZH32NFRESS95RA5NRCG0N:
 
-:salt: **Banners**
+:01KQMHG1KN22AV5AB9JDTMRAEX: **Banners**
 ***Genshin Banner | ${gDescription}***
 Ends on ${gBannerTime?.queryresult?.pods?.[0]?.subpods?.[0]?.img?.title}
 Time left: ${gBannerTime?.queryresult?.pods?.[2]?.subpods?.[0]?.img?.title}
